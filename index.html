@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  <title>Dashboard - TailwindCss</title>
+</head>
+<body class="bg-gray-200">
+  <span class="absolute top-5 left-4 cursor-pointer bg-blue-600 text-gray-50 rounded-md lg:hidden cursor-pointer"  onclick="openSidebar()">
+    <i class="bx bx-menu-alt-left text-2xl px-2"></i>
+  </span>
+  <nav class="sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 w-[300px] border-r-[1px] border-gray-300 bg-gray-50 transition-all duration-300">
+    <header class="text-gray-900 text-xl">
+      <div class="flex items-center p-2.5 mt-1 relative">
+        <i class="bx bx-home text-gray-900 mr-2"></i>
+        <h1>TailwindCss Dashboard</h1>
+        <i class="bx bx-x right-0 absolute lg:hidden cursor-pointer text-2xl"  onclick="openSidebar()"></i>
+      </div>
+    </header>
+
+    <div class="mt-4 ml-2">
+      <h1 class="text-gray-600">Home</h1>
+      <div class="flex items-center p-2.5 hover:bg-blue-600 hover:text-gray-50 duration-300 rounded-md cursor-pointer">
+        <i class="bx bx-analyse mr-2"></i>
+        <h1>Analytics Dashboard</h1>
+      </div>
+
+      <div class="flex items-center p-2.5 hover:bg-blue-600 hover:text-gray-50 duration-300 rounded-md cursor-pointer">
+        <i class="bx bx-cart mr-2"></i>
+        <h1>Analytics Dashboard</h1>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mt-14 lg:mt-0 h-100vh p-4 lg:ml-[300px]">
+    <section id="cards-info" class="grid gap-5 md:grid-cols-3">
+      <div class="bg-gray-50 h-36 lg:h-44 rounded-md p-6">
+        <header class="flex items-center justify-between">
+          <i class="bx bx-dollar text-4xl text-blue-600"></i>
+          <span class="bg-blue-600 rounded-full text-gray-50 px-4 py-1">12%<i class='bx bxs-chevron-up'></i></span>
+        </header>
+        <main class="mt-4 lg:mt-8 ml-1">
+          <h1 class="text-3xl font-semibold">R$ 12,775,00</h1>
+          <span class="text-gray-600">Items sales</span>
+        </main>
+      </div>
+      
+      <div class="bg-gray-50 h-36 lg:h-44 rounded-md p-6">
+        <header class="flex items-center justify-between">
+          <i class="bx bx-shopping-bag text-4xl text-orange-600"></i>
+          <span class="bg-orange-600 rounded-full text-gray-50 px-4 py-1">12%<i class='bx bxs-chevron-down'></i></span>
+        </header>
+        <main class="mt-4 lg:mt-8 ml-1">
+          <h1 class="text-3xl font-semibold">9475</h1>
+          <span class="text-gray-600">New Orders</span>
+        </main>
+      </div>
+
+      <div class="bg-gray-50 h-36 lg:h-44 rounded-md p-6">
+        <header class="flex items-center justify-between">
+          <i class="bx bx-user text-4xl text-gray-600"></i>
+          <span class="bg-blue-600 rounded-full text-gray-50 px-4 py-1">12%<i class='bx bxs-chevron-up'></i></span>
+        </header>
+        <main class="mt-4 lg:mt-8 ml-1">
+          <h1 class="text-3xl font-semibold">5186</h1>
+          <span class="text-gray-600">Users</span>
+        </main>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    function openSidebar() {
+      document.querySelector('.sidebar').classList.toggle('left-[-300px]')
+    }
+  </script>
+</body>
+</html>
